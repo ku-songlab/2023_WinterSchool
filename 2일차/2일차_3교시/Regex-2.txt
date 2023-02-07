@@ -1,20 +1,30 @@
 #불필요한 항목 지우기
 
-Find what: (^입력[\d\.]{11}\s오(전|후)\s[\d\:]{4}\s기사원문)|(^\s추천)|(^댓글)|(^본문\s요약봇)|(^텍스트\s음성\s변환\s서비스\s사용하기)|(^글자\s크기\s변경하기)|(^SNS\s보내기)|(^인쇄하기)
+Find what: (^입력[\d\.]{11}\s오(전|후)\s[\d:]{4}\s기사원문)|(^\s추천)|(^댓글)|(^본문\s요약봇)|(^텍스트\s음성\s변환\s서비스\s사용하기)|(^글자\s크기\s변경하기)|(^SNS\s보내기)|(^인쇄하기)
+
 Replace with: 
 
 
 
 #ⓒ로 시작하는 항목 지우기
 
-Find what: ^ⓒ\s([가-힣]{2,}\s)+
+Find what: 
+
+#Notedpad++ 기준
+^ⓒ\s([가-힣]{2,}\s)+ 
+
+#Visual Stuido Code 기준
+^ⓒ\s(([가-힣]{2,}|\s)*)+
+
+
 Replace with: 
 
 
 
 #▲로 시작하는 항목 지우기
 
-Find what: ^▲(\s){2}[가-힣‘’·\.\d\s]+
+Find what: ^▲(\s){2}[가-힣‘’·\.\d\s\-\(\),]+
+
 Replace with: 
 
 
@@ -22,11 +32,25 @@ Replace with:
 #-기호를 Q로 바꾸기
 
 Find what: ^-
-Replace with: Q
 
+Replace with: Q
 
 
 #공백 지우기
 
-Find what: \r\n\r\n
-Replace with: \r\n
+Find what: 
+
+#Notedpad++ 기준
+\r\n\r\n 
+
+#Visual Stuido Code 기준
+\n\n
+
+
+Replace with:
+
+#Notedpad++ 기준
+\r\n
+
+#Visual Stuido Code 기준
+\n

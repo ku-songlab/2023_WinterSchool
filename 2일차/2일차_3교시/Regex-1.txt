@@ -1,33 +1,40 @@
 #기사 제목 표기하기
-
 Find what: (\[내가\s읽은\s책\]\s시대의\s거울)
 Replace with: [기사 제목: $1]
 
 
 
 #책 제목 표기하기
-
-Find what: (\영화,\s도시를\s캐스팅하다\(백정우\/\s한티재\/\s2019\))
+Find what: (영화,\s도시를\s캐스팅하다\(백정우\/\s한티재\/\s2019\))
 Replace with: [책 제목: $1]
 
 
 
 #글쓴이 표기하기
-
 Find what: ([가-힣]{2,4})(\s학이사독서아카데미\s회원)
 Replace with: [글쓴이: $1]
 
 
 
 #불필요한 항목 지우기
-
-Find what: (^입력[\d\.]{11} 오(전|후) [\d\:]{5} 기사원문)|(^\s추천)|(^댓글)|(^본문 요약봇)|(^텍스트 음성 변환 서비스 사용하기)|(^글자 크기 변경하기)|(^SNS 보내기)|(^인쇄하기)|(^[가-힣]{2,}부\s(\w+@\w+\.\w+))|(^Copyright ⓒ [가-힣]{4,}. All rights reserved. 무단 전재 및 재배포 금지.)
+Find what: (^입력[\d\.]{11} 오(전|후) [\d:]{5} 기사원문)|(^\s추천)|(^댓글)|(^본문 요약봇)|(^텍스트 음성 변환 서비스 사용하기)|(^글자 크기 변경하기)|(^SNS 보내기)|(^인쇄하기)|(^[가-힣]{2,}부\s(\w+@\w+\.\w+))|(^Copyright ⓒ [가-힣]{4,}. All rights reserved. 무단 전재 및 재배포 금지.)
 Replace with:
 
 
 
 #공백 지우기
+Find what: 
 
-Find what: \r\n\r\n
-Replace with: \r\n
+#Notepad++ 기준
+\r\n\r\n
 
+#Visual Studio Code 기준
+\n\n\s?
+
+Replace with: 
+
+#Notedpad++ 기준
+\r\n
+
+#Visual Studio Code 기준
+\n
