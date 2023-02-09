@@ -1,0 +1,9 @@
+torch
+numpy
+seaborn
+transformers
+pytorch-transformers
+keras
+gdown
+xlrd >= 1.0.0
+tqdm
